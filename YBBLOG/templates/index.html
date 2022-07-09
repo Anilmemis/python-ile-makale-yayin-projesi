@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+<h3>Yazılım Bilimi Bloğuna Hoş geldiniz</h3>
+    <p>Bu blogta geliştiriciler olarak blog yazılarınızı paylaşabilirsiniz ve instanlara yardımcı olabilirsiniz</p>
+</div>
+
+<ul>
+{% for article in articles %}
+
+<li>Article Id : {{article.id}} - Title : {{article.title}} - Content : {{article.content}}</li>
+{% endfor %}
+</ul>
+
+
+<!--
+{% if islem == 1 %}
+<p>Birinci İşlem</p>
+{% elif islem == 2 %}
+<p>İkinci İşlem</p>
+{% else %}
+<p>Geçersiz İşlem</p>
+{% endif %}
+-->
+{% endblock %}
